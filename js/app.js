@@ -14,10 +14,12 @@ const mostrarProductos = (productos) => {
     const li = document.createElement("li");
     li.innerHTML = `
     <img src="${producto.imagen}" alt="${producto.nombre}" />
+    <div class="fondo-card">
     <h3>${producto.nombre}</h3>
     <p class="product-description">${producto.descripcion}</p>
     <p class="product-price">$${producto.precio}</p>
     <button id="agregar-${producto.id}" class="add-to-cart">Agregar al carrito</button>
+    <div>
     `;
     // Agrego la card al contenedor
     contenedorProductos.appendChild(li);
@@ -41,6 +43,11 @@ const agregarAlCarrito = (productos, id) => {
     const producto = productos.find((producto) => producto.id === id);
     // Agregamos un nuevo objeto con el contenido del producto y un campo cantidad en 1. Para más información sobre spread operator: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
     carrito.push({ ...producto, cantidad: 1 });
+    Swal.fire(
+      "Producto agregado!",
+      "El producto fue agregado a tu carrito!",
+      "success"
+    );
   } else {
     // Si el producto está en el carrito, lo buscamos y le incrementamos las unidades
     const producto = carrito.find((producto) => producto.id === id);
@@ -92,6 +99,20 @@ const mostrarCarrito = () => {
       boton.addEventListener("click", () => {
         // Si hacemos clic en el botón, se elimina del carrito
         eliminarProducto(producto.id);
+        Swal.fire({
+          title: "Estás seguro que deseas eliminar este producto?",
+          showDenyButton: true,
+          showCancelButton: true,
+          confirmButtonText: "Eliminar",
+          denyButtonText: `No eliminar`,
+        }).then((result) => {
+          /* Read more about isConfirmed, isDenied below */
+          if (result.isConfirmed) {
+            Swal.fire("Tu producto fue eliminado", "", "success");
+          } else if (result.isDenied) {
+            Swal.fire("Tu producto no fue eliminado", "", "info");
+          }
+        });
       });
 
       // Agrego evento al botón decrementar.
@@ -149,6 +170,7 @@ const actualizarTotal = (contenedor) => {
     (acumulador, producto) => acumulador + producto.precio * producto.cantidad,
     0
   );
+  contenedor.classList.add("tamaniotx");
   contenedor.textContent = `Total: $${total}`;
 };
 

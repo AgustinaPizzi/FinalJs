@@ -3,35 +3,35 @@
     "id": 1,
     "nombre": "Varita Harry",
     "precio": 7000,
-    "imagen": "../img/varitaharry.jpg",
+    "imagen": "./img/varitaharry.jpg",
     "descripcion": "Varita original Harry Potter WB"
     },
     {
       "id": 2,
       "nombre": "Varita de Sauco",
       "precio": 9000,
-      "imagen": "../img/varitasauco.jpg",
+      "imagen": "./img/varitasauco.jpg",
       "descripcion": "Varita de Sauco, reliquias de la muerte WB"
     },
     {
       "id":3,
       "nombre": "Varita Hermione Granger",
       "precio": 8530,
-      "imagen": "../img/varitahermione.jpg",
+      "imagen": "./img/varitahermione.jpg",
       "descripcion": "Varita Hermione Granger WB"
     },
     {
       "id": 4,
       "nombre": "Nimbus 2000",
       "precio": 3500,
-      "imagen": "../img/nimbus200.jpg",
+      "imagen": "./img/nimbus200.jpg",
       "descripcion": "Escoba Nimbus 2000 WB"
     },
     {
       "id": 5,
       "nombre": "Nimbus 2001",
       "precio": 4000,
-      "imagen": "../img/nimbus2001.jpg",
+      "imagen": "./img/nimbus2001.jpg",
       "descripcion": "Escoba Nimbus 2001 WB"
     },
   
@@ -39,49 +39,77 @@
       "id": 6,
       "nombre": "Nimbus Saeta de Fuego",
       "precio": 5600,
-      "imagen": "../img/fuego.jpg",
+      "imagen": "./img/fuego.jpg",
       "categoria": "Escoba Saeta de Fuego WB"
     },
     {
       "id": 7,
       "nombre": "Funko Hagrid Deluxe",
       "precio": 17000,
-      "imagen": "../img/funkohagrid.jpg",
+      "imagen": "./img/funkohagrid.jpg",
       "descripcion": "Funko"
     },
     {
       "id": 8,
       "nombre": "Funko Minerva Deluxe ",
       "precio": 9000,
-      "imagen": "../img/funkominerva.jpg",
+      "imagen": "./img/funkominerva.jpg",
       "descripcion": "Funko"
     },
     {
       "id": 9,
       "nombre": "Funko Sybill Trelawney",
       "precio": 8420,
-      "imagen": "../img/funkoTri.jpg",
+      "imagen": "./img/dobby.png",
       "descripcion":"Funko"
     },
     {
       "id": 10,
       "nombre": "Funko Dumbeldore Deluxe ",
       "precio": 10000,
-      "imagen": "../img/funkoDumble.jpg",
+      "imagen": "./img/funkoDumble.jpg",
       "descripcion": "Funko"
     },
     {
       "id": 11,
-      "nombre": "Reliquias de la muerte ",
-      "precio": 2500,
-      "imagen": "../img/reliquias.jpg",
-      "descripcion": "LLavero de las 3 reliquias de la muerte "
+      "nombre": "Lego Sirius",
+      "precio": 75000,
+      "imagen": "./img/lego1.jpg",
+      "descripcion": "Rescate Sirius, torre castillo "
     },
     {
       "id": 12,
-      "nombre": "Fenix ",
-      "precio": 3000,
-      "imagen": "../img/llaverofenix.jpg",
-      "descripcion": "Llavero Ave Fénix"
-    }
+      "nombre": "Avenida Diagon",
+      "precio": 95000,
+      "imagen": "./img/diagon.jpeg",
+      "descripcion": "Sortilegios Weasley y Correspondencia lechuzas"
+    },
+    {
+        "id": 13,
+        "nombre": "Bufanda Gryffindor",
+        "precio": 10000,
+        "imagen": "./img/bufanda-g.jpeg",
+        "descripcion": "Material: Hilo sintético, 100% acrílico. "
+      },
+      {
+        "id": 14,
+        "nombre": "Bufanda Hufflepuff",
+        "precio": 10000,
+        "imagen": "./img/bufanda-h.png",
+        "descripcion": "Material: Hilo sintético, 100% acrílico. "
+      },
+      {
+        "id": 15,
+        "nombre": "Bufanda Slytherin",
+        "precio": 10000,
+        "imagen": "./img/bufanda-s.jpg",
+        "descripcion": "Material: Hilo sintético, 100% acrílico. "
+      },
+      {
+        "id": 16,
+        "nombre": "Bufanda Revenclaw",
+        "precio": 10000,
+        "imagen": "./img/bufanda-r.jpg",
+        "descripcion": "Material: Hilo sintético, 100% acrílico. "
+      }
   ]
