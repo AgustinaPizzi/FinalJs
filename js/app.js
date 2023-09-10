@@ -96,9 +96,9 @@ const mostrarCarrito = () => {
       // Ahora la card está en el DOM. El botón ya existe, por lo tanto lo capturo
       const boton = document.getElementById(`eliminar-${producto.id}`);
       // Agrego evento al botón capturado.
+
       boton.addEventListener("click", () => {
         // Si hacemos clic en el botón, se elimina del carrito
-        eliminarProducto(producto.id);
         Swal.fire({
           title: "Estás seguro que deseas eliminar este producto?",
           showDenyButton: true,
@@ -108,6 +108,7 @@ const mostrarCarrito = () => {
         }).then((result) => {
           /* Read more about isConfirmed, isDenied below */
           if (result.isConfirmed) {
+            eliminarProducto(producto.id); //Colocado acá solo se elimina si se confirma
             Swal.fire("Tu producto fue eliminado", "", "success");
           } else if (result.isDenied) {
             Swal.fire("Tu producto no fue eliminado", "", "info");
